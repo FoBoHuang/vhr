@@ -53,6 +53,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring().antMatchers("/index.html", "/static/**","/login_p");
     }
 
+    /*
+     * @功能描述 在configure(HttpSecurity http)方法中，通过withObjectPostProcessor将刚刚创建的UrlFilterInvocationSecurityMetadataSource和UrlAccessDecisionManager注入进来。到时候，请求都会经过刚才的过滤器（除了configure(WebSecurity web)方法忽略的请求）
+     *
+     * @author Huang
+     * @date 2018/9/3 22:29
+     * @param
+     * @return
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()

@@ -18,6 +18,15 @@ import java.util.Iterator;
  */
 @Component
 public class UrlAccessDecisionManager implements AccessDecisionManager {
+    
+    /*  
+     * @功能描述 
+     *
+     * @author Huang  
+     * @date 2018/9/3 22:09 
+     * @param 其中第一个参数中保存了当前登录用户的角色信息，第三个参数则是UrlFilterInvocationSecurityMetadataSource中的getAttributes方法传来的，表示当前请求需要的角色（可能有多个） 
+     * @return  
+     */
     @Override
     public void decide(Authentication authentication, Object o, Collection<ConfigAttribute> collection) throws AccessDeniedException, AuthenticationException {
         Iterator<ConfigAttribute> iterator = collection.iterator();
