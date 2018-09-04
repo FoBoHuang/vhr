@@ -14,6 +14,15 @@ import java.util.concurrent.Executors;
  */
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
+
+    /*
+     * @功能描述 配置日期转换器
+     *
+     * @author Huang
+     * @date 2018/9/4 21:04
+     * @param
+     * @return
+     */
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverter(new DateConverter());

@@ -43,6 +43,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     AuthenticationAccessDeniedHandler authenticationAccessDeniedHandler;
 
+    /*
+     * @功能描述 登陆的时候也对密码进行加密处理
+     *
+     * @author Huang
+     * @date 2018/9/4 19:48
+     * @param
+     * @return
+     */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(hrService).passwordEncoder(new BCryptPasswordEncoder());

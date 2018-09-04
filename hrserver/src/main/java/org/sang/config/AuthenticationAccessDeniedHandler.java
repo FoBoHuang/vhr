@@ -21,7 +21,7 @@ public class AuthenticationAccessDeniedHandler implements AccessDeniedHandler {
      *
      * @author Huang
      * @date 2018/9/3 22:38
-     * @param [httpServletRequest, resp, e] 
+     * @param [httpServletRequest, resp, e]
      * @return void
      */
     @Override

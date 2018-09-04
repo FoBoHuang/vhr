@@ -23,6 +23,14 @@ public class HrService implements UserDetailsService {
     @Autowired
     HrMapper hrMapper;
 
+    /*
+     * @功能描述 实现SpringSecurity内的UserDetailsService接口来完成自定义查询用户的逻辑
+     *
+     * @author Huang
+     * @date 2018/9/4 19:52
+     * @param
+     * @return
+     */
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         Hr hr = hrMapper.loadUserByUsername(s);
@@ -32,6 +40,14 @@ public class HrService implements UserDetailsService {
         return hr;
     }
 
+    /*/*
+     * @功能描述 用户注册时，对密码进行加密处理，通过BCryptPasswordEncoder中的encode方法对密码进行处理
+     *
+     * @author Huang
+     * @date 2018/9/4 19:48
+     * @param [username, password]
+     * @return int
+     */
     public int hrReg(String username, String password) {
         //如果用户名存在，返回错误
         if (hrMapper.loadUserByUsername(username) != null) {
