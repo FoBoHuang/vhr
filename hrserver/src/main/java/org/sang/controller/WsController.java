@@ -25,6 +25,14 @@ public class WsController {
         messagingTemplate.convertAndSendToUser(destUser, "/queue/chat", new ChatResp(message, principal.getName()));
     }
 
+    /*
+     * @功能描述 一会当数据库的消息添加成功之后，前端向/ws/nf发送消息，前端订阅/topic/nf的消息
+     *
+     * @author Huang
+     * @date 2018/9/5 10:51
+     * @param
+     * @return
+     */
     @MessageMapping("/ws/nf")
     @SendTo("/topic/nf")
     public String handleNF() {
