@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.Collection;
 import java.util.Iterator;
 
-/**
+/** 访问资源决策器
  * Created by sang on 2017/12/28.
  */
 @Component

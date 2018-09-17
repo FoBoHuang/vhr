@@ -15,7 +15,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * 路径拦截器
+ * 元资源过滤拦截器
  * Created by sang on 2017/12/28.
  */
 @Component
